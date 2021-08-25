@@ -110,10 +110,12 @@ body {
     background-color: #dee2e6;
     box-sizing: border-box;
     opacity: 0;
+    visibility: hidden;
     transition: .2s;
 
     &.open {
         opacity: 1;
+        visibility: visible;
     }
 
     .input {

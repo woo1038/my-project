@@ -1,14 +1,21 @@
 import React from "react";
 import "../scss/TodoList.scss";
 import TodoItem from "./TodoItem";
+import { useTodoState } from "../TodoContext";
 
 function TodoList() {
+  const todos = useTodoState();
+
   return (
     <div className="TodoList">
-      <TodoItem text="흐으으으으ㅡ음" active="active" />
-      <TodoItem text="이렇게?" active="active" />
-      <TodoItem text="요렇게" />
-      <TodoItem text="졸린건가?" />
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          id={todo.id}
+          text={todo.text}
+          active={todo.active}
+        />
+      ))}
     </div>
   );
 }
