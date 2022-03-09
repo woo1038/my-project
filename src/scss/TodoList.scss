@@ -1,171 +1,23 @@
 body {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
-.TodoSection {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 512px;
-    height: 768px;
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 32px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.4);
-}
+.hello div {
+  margin-bottom: 135px;
+  @media (max-width: 768px) {
+    padding: 25px;
+  }
 
-.TodoHead {
-    list-style: none;
+  h1 {
     margin: 0;
-    padding: 24px 32px;
-    border-bottom: 1px solid #e5e5e5;
-
-    h1 {
-        font-size: 36px;
-        margin: 0;
+    font-weight: 300;
+    font-size: 45px;
+    @media (max-width: 768px) {
+      font-size: 30px;
     }
-    .day {
-        margin-bottom: 24px;
-        color: #868e96;
-        font-size: 21px;
-    }
-    .count {
-        color: #20c997;
-        font-size: 18px;
-    }   
-}
-
-.TodoList {
-    flex: 1;
-    padding: 12px 32px 0;
-}
-
-.TodoItem {
-    display: flex;
-    align-items: center;
-
-    .check {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        margin-right: 12px;
-        border-radius: 16px;
-        border: 1px solid #ced4da;
-        color: transparent;
-    }
-
-    .text {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        margin-right: auto;
-    }
-    
-    .remove {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #dee2e6;
-        font-size: 24px;
-        opacity: 0;
-        cursor: pointer;
-
-        &:hover {
-            color: #ff6b6b;
-        }
-    }
-
-    &.active {
-        .check {
-            border: 1px solid #38d9a9;
-            color: #38d9a9;
-        }
-        .text {
-            color: #ced4da;
-        }
-    }
-
-    &:hover {
-        .remove {
-            opacity: 1;
-        }
-
-    }
-}
-
-.TodoInputs {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    padding: 24px 32px;
-    padding-bottom: 0;
-    background-color: #dee2e6;
-    box-sizing: border-box;
-    opacity: 0;
-    visibility: hidden;
-    transition: .2s;
-
-    &.open {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .input {
-        padding: 10px 5px;
-        width: 100%;
-        border: 1px solid #ced0d3;
-        border-radius: 5px;
-        box-sizing: border-box;
-        outline: none;
-
-        &:focus {
-            border: 1px solid #a9aaac;
-            box-shadow: 0 0 3px 3px #bfc0c2;
-        }
-    }
-}
-
-.TodoCreate {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    background: #38d9a9;
-    border-radius: 50%;
-    color: white;
-    font-size: 60px;
-    box-shadow: rgba($color: #000000, $alpha: 0.8);
-    cursor: pointer;
-    transition: .15s;
-
-    &.open {
-        background: #ff6b6b;
-        transform: translate(-50%, 50%) rotate(45deg);
-        &:hover {
-            background: lighten(#ff6b6b, 5%);
-        }
-        &:active {
-            background: darken(#ff6b6b, 5%);
-        }
-    }
-
-    &:hover {
-        background: lighten(#38d9a9, 5%);
-    }
-    &:active {
-        background: darken(#38d9a9, 5%);
-    }
+  }
+  h3 {
+    font-weight: 200;
+    font-size: 15px;
+  }
 }
