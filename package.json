@@ -1,5 +1,5 @@
 {
-  "name": "todolist",
+  "name": "my-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,6 +40,10 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.38.0"
-  }
+    "sass": "^1.49.9"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/woo1038/my-project.git",
+  "author": "hyuk <woo1038@hanmail.net>",
+  "license": "MIT"
 }

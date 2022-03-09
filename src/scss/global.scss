@@ -1,0 +1,30 @@
+body {
+  background-color: #e9ecef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 20vw;
+  height: 20vh;
+  margin: 50vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #febf00;
+  transition: 0.3s ease;
+  transform: scale(1);
+}
+
+.box.active {
+  background: #f03d3d;
+  color: #fff;
+  transform: scale(3);
+  // transform: perspective(100px) translateZ(10px);
+}
