@@ -6,7 +6,7 @@ import Open from "./components/open";
 function App() {
   return (
     <>
-      <Open />
+      <Home />
     </>
   );
 }
