@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../scss/open.scss";
 
 function Open() {
-  window.onload = function () {
+  useEffect(() => {
     // Section 1
     const scrollTitle = document.querySelector(".fix_text_motion");
     const titText1 = scrollTitle.querySelector(".intro_txt_01");
@@ -134,6 +134,9 @@ function Open() {
       let deviceImg = document.querySelector(".device_fix .slide_wrap figure");
       let imgWidth = deviceImg.offsetWidth;
 
+      console.log("🎈🎈🎈🎈");
+      console.log(section3_percent);
+
       if (section3_percent >= 12 && section3_percent < 43) {
         imageChange(imgWidth * 0);
         document
@@ -141,14 +144,14 @@ function Open() {
           .classList.add("active");
       }
 
-      if (section3_percent >= 43 && section3_percent < 75) {
+      if (section3_percent >= 43 && section3_percent < 72) {
         imageChange(imgWidth * 1);
         document
           .querySelector(".fix_Work_motion .text_box .txt02")
           .classList.add("active");
       }
 
-      if (section3_percent >= 75 && section3_percent < 100) {
+      if (section3_percent >= 72 && section3_percent < 100) {
         imageChange(imgWidth * 2);
         document
           .querySelector(".fix_Work_motion .text_box .txt03")
@@ -199,7 +202,7 @@ function Open() {
     }
 
     init();
-  };
+  }, []);
 
   return (
     <>
@@ -208,7 +211,7 @@ function Open() {
           <article className="sticky_cont">
             <div className="cont_box">
               <div className="intro_txt_01">
-                <h2>안녕하세요</h2>
+                <h2>안녕하세요.</h2>
               </div>
               <div className="intro_txt_02">
                 <h2>개발자 김우혁입니다.</h2>
@@ -239,7 +242,16 @@ function Open() {
 
         <section className="fix_Work_motion">
           <article className="fix_wrap inner">
-            <h2 className="tit">Portfolio</h2>
+            <div className="title">
+              <h2 className="tit">2022</h2>
+              <h3 className="sub-tit">Portfolio.</h3>
+              <p>
+                AirPods Max는 AirPods 제품군이 자랑하는 간편하면서 매혹적인
+                사용성을 그대로 갖추고 있습니다. 설정부터 Siri 명령어까지,
+                매끄러운 청취 경험을 완성하기 위한 여러 기능 덕분에 낮부터
+                밤까지 기기를 넘나들며 당신만의 리듬에 심취할 수 있죠.
+              </p>
+            </div>
             <div className="device_fix">
               <div className="watch_img">
                 <figure className="img_device">
