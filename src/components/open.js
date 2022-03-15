@@ -131,59 +131,87 @@ function Open() {
       }
 
       // Section 3
-      let deviceImg = document.querySelector(".device_fix .slide_wrap figure");
-      let imgWidth = deviceImg.offsetWidth;
+      if (section3_percent >= 0 && section3_percent < 25) {
+        document
+          .querySelector(".fix_Work_motion .slide .box01")
+          .classList.add("active");
 
-      console.log("🎈🎈🎈🎈");
+        document
+          .querySelector(".fix_Work_motion .text_box .txt01")
+          .classList.add("active");
+      } else {
+        document
+          .querySelector(".fix_Work_motion .slide .slide_box")
+          .classList.remove("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt01")
+          .classList.remove("active");
+      }
+
+      if (section3_percent >= 25 && section3_percent < 50) {
+        document
+          .querySelector(".fix_Work_motion .slide .box02")
+          .classList.add("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt02")
+          .classList.add("active");
+      } else {
+        document
+          .querySelector(".fix_Work_motion .slide .box02")
+          .classList.remove("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt02")
+          .classList.remove("active");
+      }
+
+      if (section3_percent >= 50 && section3_percent < 75) {
+        document
+          .querySelector(".fix_Work_motion .slide .box03")
+          .classList.add("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt03")
+          .classList.add("active");
+      } else {
+        document
+          .querySelector(".fix_Work_motion .slide .box03")
+          .classList.remove("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt03")
+          .classList.remove("active");
+      }
+
+      if (section3_percent >= 75 && section3_percent < 100) {
+        document
+          .querySelector(".fix_Work_motion .slide .box04")
+          .classList.add("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt04")
+          .classList.add("active");
+      } else if (section3_percent < 75) {
+        document
+          .querySelector(".fix_Work_motion .slide .box04")
+          .classList.remove("active");
+
+        document
+          .querySelector(".fix_Work_motion .text_box .txt04")
+          .classList.remove("active");
+      }
+
+      console.log("🚙🚙🛺🛺🚕");
+      console.log(section3_isMobile);
+      console.log(section3_scrollHeight);
+      console.log(section3_winScrollTop);
+      console.log(section3_OffsetTop);
+      console.log(section3_scrollRealHeight);
+      console.log(section3_ScrollTop);
+      console.log(section3_scrollPerecnt);
       console.log(section3_percent);
-
-      if (section3_percent >= 12 && section3_percent < 43) {
-        imageChange(imgWidth * 0);
-        document
-          .querySelector(".fix_Work_motion .text_box .txt01")
-          .classList.add("active");
-      }
-
-      if (section3_percent >= 43 && section3_percent < 72) {
-        imageChange(imgWidth * 1);
-        document
-          .querySelector(".fix_Work_motion .text_box .txt02")
-          .classList.add("active");
-      }
-
-      if (section3_percent >= 72 && section3_percent < 100) {
-        imageChange(imgWidth * 2);
-        document
-          .querySelector(".fix_Work_motion .text_box .txt03")
-          .classList.add("active");
-      }
-
-      if (section3_percent >= 100) {
-        imageChange(imgWidth * 3);
-        document
-          .querySelector(".fix_Work_motion .text_box .txt04")
-          .classList.add("active");
-      }
-
-      if (section3_percent < 12) {
-        document
-          .querySelector(".fix_Work_motion .text_box .txt01")
-          .classList.remove("active");
-        document
-          .querySelector(".fix_Work_motion .text_box .txt02")
-          .classList.remove("active");
-        document
-          .querySelector(".fix_Work_motion .text_box .txt03")
-          .classList.remove("active");
-        document
-          .querySelector(".fix_Work_motion .text_box .txt04")
-          .classList.remove("active");
-      }
-    }
-
-    function imageChange(moveX) {
-      let img = document.querySelector(".fix_Work_motion .slide_wrap .slide");
-      img.style.transform = "translateX(" + -moveX + "px)";
     }
 
     function init() {
@@ -259,27 +287,66 @@ function Open() {
                 </figure>
                 <div className="slide_wrap">
                   <div className="slide">
-                    <figure>
-                      <img src={require("../images/1.jpg").default} />
-                    </figure>
-                    <figure>
-                      <img src={require("../images/2.jpg").default} />
-                    </figure>
-                    <figure>
-                      <img src={require("../images/3.jpg").default} />
-                    </figure>
-                    <figure>
-                      <img src={require("../images/4.jpg").default} />
-                    </figure>
+                    <div className="slide_box box01">
+                      <figure>
+                        <img src={require("../images/1.jpg").default} />
+                      </figure>
+                      <div className="text_box">
+                        <h4>설정도 탭 한 번으로</h4>
+                        <p className="txt01">
+                          AirPods Max는 iPhone 또는 iPad와 즉시 연결됩니다.
+                          AirPods Max를 기기 가까이 가져간 다음, 화면에서
+                          ‘연결’을 탭하기만 하면 간단히 페어링할 수 있죠.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="slide_box box02">
+                      <figure>
+                        <img src={require("../images/2.jpg").default} />
+                      </figure>
+                      <div className="text_box">
+                        <h4>설정도 탭 한 번으로</h4>
+                        <p className="txt02">
+                          AirPods Max는 iPhone 또는 iPad와 즉시 연결됩니다.
+                          AirPods Max를 기기 가까이 가져간 다음, 화면에서
+                          ‘연결’을 탭하기만 하면 간단히 페어링할 수 있죠.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="slide_box box03">
+                      <figure>
+                        <img src={require("../images/3.jpg").default} />
+                      </figure>
+                      <div className="text_box">
+                        <h4>설정도 탭 한 번으로</h4>
+                        <p className="txt03">
+                          {" "}
+                          AirPods Max는 iPhone 또는 iPad와 즉시 연결됩니다.
+                          AirPods Max를 기기 가까이 가져간 다음, 화면에서
+                          ‘연결’을 탭하기만 하면 간단히 페어링할 수 있죠.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="slide_box box04">
+                      <figure>
+                        <img src={require("../images/4.jpg").default} />
+                      </figure>
+                      <div className="text_box">
+                        <h4>설정도 탭 한 번으로</h4>
+                        <p className="txt04">
+                          {" "}
+                          AirPods Max는 iPhone 또는 iPad와 즉시 연결됩니다.
+                          AirPods Max를 기기 가까이 가져간 다음, 화면에서
+                          ‘연결’을 탭하기만 하면 간단히 페어링할 수 있죠.
+                        </p>
+                      </div>
+                    </div>
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="text_box">
-              <p className="txt01">수정 1</p>
-              <p className="txt02">수정 2</p>
-              <p className="txt03">수정 3</p>
-              <p className="txt04">수정 4</p>
             </div>
           </article>
         </section>

@@ -275,6 +275,7 @@ body {
 // ===========================
 /* Section 3 */
 .fix_Work_motion {
+  height: 5000px;
   background: #fff;
 
   .inner {
@@ -347,36 +348,6 @@ body {
         word-break: keep-all;
       }
     }
-    .text_box {
-      float: left;
-      width: 50%;
-      padding-top: 1000px;
-
-      p {
-        max-width: 80%;
-        font-size: 36px;
-        font-family: "SF Pro KR";
-        color: blue;
-        transition: color 0.5s;
-
-        &.active {
-          color: red;
-        }
-
-        ~ .txt02 {
-          margin-top: 1000px;
-        }
-
-        ~ .txt03 {
-          margin-top: 1000px;
-        }
-
-        ~ .txt04 {
-          margin-top: 1000px;
-          margin-bottom: 500px;
-        }
-      }
-    }
 
     .device_fix {
       position: sticky;
@@ -384,7 +355,7 @@ body {
       top: 0;
       left: 0;
       float: left;
-      width: 50%;
+      width: 100%;
       height: 100vh;
       z-index: 40;
 
@@ -403,7 +374,7 @@ body {
           position: absolute;
           left: 0;
           top: 50%;
-          width: 100%;
+          width: 60%;
           height: 80%;
           transform: translateY(-50%);
           z-index: 20;
@@ -415,19 +386,45 @@ body {
           left: 5px;
           top: 160px;
           z-index: 10;
-          height: 681px;
-          width: 97%;
+          height: 55%;
+          width: 100%;
 
           .slide {
             display: flex;
-            width: 400%;
+            width: 100%;
             height: 100%;
             transition: transform 0.5s;
 
-            figure {
-              float: left;
+            .slide_box {
+              position: absolute;
+              top: 0;
+              left: 0;
               width: 100%;
-              margin: 0;
+              height: 100%;
+              display: flex;
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+
+              &.active {
+                opacity: 1;
+              }
+
+              figure {
+                width: 90%;
+                margin: 0;
+              }
+
+              .text_box {
+                width: 25%;
+                margin-left: 25%;
+                margin-top: auto;
+                word-break: keep-all;
+
+                p {
+                  font-size: 24px;
+                  color: #a2a2a6;
+                }
+              }
             }
           }
         }
@@ -475,47 +472,6 @@ body {
     .fix_wrap .tit {
       font-size: 54px;
       margin: auto;
-
-      .text_box {
-        float: none;
-        position: sticky;
-        left: 0;
-        top: 0;
-        z-index: 50;
-        width: 100%;
-        padding-top: 100px;
-
-        p {
-          position: absolute;
-          left: 0;
-          top: 100px;
-          width: 100%;
-          max-width: 100%;
-          padding: 0 20px;
-          font-size: 18px;
-          text-align: center;
-          box-sizing: border-box;
-          opacity: 0;
-          transition: opacity 0.5s;
-
-          &.active {
-            opacity: 1;
-          }
-
-          ~ .txt02 {
-            margin-top: 0px;
-          }
-
-          ~ .txt03 {
-            margin-top: 0px;
-          }
-
-          ~ .txt04 {
-            margin-top: 0px;
-            margin-bottom: 0;
-          }
-        }
-      }
     }
 
     .fix_motion .fix_wrap .device_fix {
@@ -536,6 +492,47 @@ body {
 
             figure {
               width: 120px;
+            }
+
+            .text_box {
+              float: none;
+              position: sticky;
+              left: 0;
+              top: 0;
+              z-index: 50;
+              width: 100%;
+              padding-top: 100px;
+
+              p {
+                position: absolute;
+                left: 0;
+                top: 100px;
+                width: 100%;
+                max-width: 100%;
+                padding: 0 20px;
+                font-size: 18px;
+                text-align: center;
+                box-sizing: border-box;
+                opacity: 0;
+                transition: opacity 0.5s;
+
+                &.active {
+                  opacity: 1;
+                }
+
+                ~ .txt02 {
+                  margin-top: 0px;
+                }
+
+                ~ .txt03 {
+                  margin-top: 0px;
+                }
+
+                ~ .txt04 {
+                  margin-top: 0px;
+                  margin-bottom: 0;
+                }
+              }
             }
           }
         }
