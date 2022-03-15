@@ -139,7 +139,7 @@ function Open() {
         document
           .querySelector(".fix_Work_motion .text_box .txt01")
           .classList.add("active");
-      } else {
+      } else if (section3_percent >= 25) {
         document
           .querySelector(".fix_Work_motion .slide .slide_box")
           .classList.remove("active");
@@ -287,7 +287,7 @@ function Open() {
                 </figure>
                 <div className="slide_wrap">
                   <div className="slide">
-                    <div className="slide_box box01">
+                    <div className="slide_box box01 active">
                       <figure>
                         <img src={require("../images/1.jpg").default} />
                       </figure>
